@@ -38,7 +38,7 @@ sample_admb_parallel <- function(parallel_number, path, algorithm, ...){
     fit <- sample_admb_nuts(path=newdir, chain=parallel_number, ...)
   if(algorithm=="RWM")
     fit <- sample_admb_rwm(path=newdir, chain=parallel_number, ...)
-  unlink(newdir, TRUE)
+  ## unlink(newdir, TRUE)
   return(fit)
 }
 
